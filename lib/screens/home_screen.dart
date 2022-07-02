@@ -26,14 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: screens[_screenIndex],
-        appBar: AppBar(actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 15),
-            child: Icon(
-              Icons.settings,
-            ),
-          ),
-        ]),
         bottomNavigationBar: BottomNavBar(
           changeCurrentIndex: changeCurrentIndex,
         ));

@@ -13,7 +13,8 @@ class AppTheme {
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             unselectedItemColor: Colors.grey,
             elevation: 15,
-            selectedItemColor: primary));
+            selectedItemColor: primary),
+        scaffoldBackgroundColor: Colors.grey[300]);
   }
 
   static const TextStyle h1w =
