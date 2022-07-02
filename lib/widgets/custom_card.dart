@@ -6,8 +6,10 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
-      child: SizedBox(
+      shape: const RoundedRectangleBorder(),
+      elevation: 2,
+      child: Container(
+        padding: const EdgeInsets.only(left: 15),
         width: width,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,7 +19,7 @@ class CustomCard extends StatelessWidget {
             Row(
               children: const [Text('data'), Text('data2')],
             ),
-            Text('tipo de meta')
+            const Text('tipo de meta')
           ],
         ),
       ),

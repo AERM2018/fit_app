@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  static const primary = Colors.orange;
   static ThemeData getLightAppTheme() {
     const Color primary = Colors.orange;
+    const Color secondary = Colors.black;
     return ThemeData.light().copyWith(
+        appBarTheme: const AppBarTheme(
+            backgroundColor: secondary,
+            actionsIconTheme: IconThemeData(color: primary),
+            elevation: 0),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             unselectedItemColor: Colors.grey,
             elevation: 15,

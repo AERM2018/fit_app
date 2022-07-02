@@ -2,8 +2,8 @@ import 'package:fit_app/models/models.dart';
 import 'package:flutter/material.dart';
 
 class CurvedContainer extends StatelessWidget {
-  const CurvedContainer({Key? key}) : super(key: key);
-
+  const CurvedContainer({Key? key, required this.height}) : super(key: key);
+  final double height;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -11,7 +11,7 @@ class CurvedContainer extends StatelessWidget {
         ClipPath(
             clipper: CurveClipper(),
             child: Container(
-                height: 300,
+                height: height,
                 decoration: const BoxDecoration(
                   color: Colors.black,
                 ),
@@ -21,7 +21,7 @@ class CurvedContainer extends StatelessWidget {
         ClipPath(
             clipper: CurveClipper(),
             child: Container(
-                height: 350,
+                height: height + 50,
                 decoration: const BoxDecoration(
                   color: Colors.black12,
                 ),

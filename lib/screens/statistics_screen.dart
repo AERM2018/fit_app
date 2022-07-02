@@ -12,7 +12,9 @@ class StatisticsScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const CurvedContainer(),
+          const CurvedContainer(
+            height: 300,
+          ),
           CardSlider(
               title: 'Daily goals',
               action:
