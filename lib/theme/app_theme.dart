@@ -18,7 +18,7 @@ class AppTheme {
   }
 
   static const TextStyle h1w =
-      TextStyle(fontSize: 45, color: Colors.white, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 70, color: Colors.white, fontWeight: FontWeight.bold);
   static const TextStyle h3w =
       TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold);
   static const TextStyle h4w =

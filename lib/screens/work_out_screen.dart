@@ -12,8 +12,32 @@ class WorkOutScreen extends StatelessWidget {
     final List<Workout> workouts = Workout.mockWorkouts();
     return SingleChildScrollView(
       child: Column(children: [
-        const CurvedContainer(
-          height: 250,
+        Stack(
+          children: [
+            const CurvedContainer(
+              height: 300,
+              distanceToFirstContainer: 50,
+            ),
+            Positioned(
+              top: 120,
+              left: MediaQuery.of(context).size.width / 2 - 80,
+              child: Row(
+                children: const [
+                  Text(
+                    '12.2',
+                    style: AppTheme.h1w,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'km',
+                    style: AppTheme.h4w,
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
         CardSlider(
           items: workouts

@@ -12,15 +12,28 @@ class StatisticsScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const CurvedContainer(
-            height: 300,
+          Stack(
+            children: [
+              const CurvedContainer(
+                height: 350,
+                distanceToFirstContainer: 50,
+              ),
+              Positioned(
+                  top: 80,
+                  left: MediaQuery.of(context).size.width / 2 - 90,
+                  child: const BasicStatistics())
+            ],
           ),
           CardSlider(
               title: 'Daily goals',
               action:
                   TextButton(onPressed: () {}, child: const Text('Open list ')),
               items: goals
-                  .map((goal) => const CustomCard(
+                  .map((goal) => CustomCard(
+                        value1: goal.value1,
+                        value2: goal.value2,
+                        donoutColor: goal.donoutColor,
+                        goalType: goal.type,
                         width: 160,
                       ))
                   .toList(),

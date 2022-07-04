@@ -1,8 +1,20 @@
+import 'package:fit_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({Key? key, required this.width}) : super(key: key);
+  const CustomCard(
+      {Key? key,
+      required this.width,
+      required this.value1,
+      required this.value2,
+      required this.donoutColor,
+      required this.goalType})
+      : super(key: key);
   final double width;
+  final double value1;
+  final String value2;
+  final Color donoutColor;
+  final String goalType;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -15,11 +27,24 @@ class CustomCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Icon(Icons.circle_outlined),
-            Row(
-              children: const [Text('data'), Text('data2')],
+            Icon(
+              Icons.circle_outlined,
+              size: 15,
+              color: donoutColor,
             ),
-            const Text('tipo de meta')
+            Row(
+              children: [
+                Text(
+                  '$value1 ',
+                  style: AppTheme.h3b,
+                ),
+                Text(
+                  value2,
+                  style: AppTheme.h4b,
+                )
+              ],
+            ),
+            Text(goalType)
           ],
         ),
       ),

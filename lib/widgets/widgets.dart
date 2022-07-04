@@ -1,5 +1,7 @@
-export 'package:fit_app/widgets/last_activity_card.dart';
+export 'package:fit_app/widgets/circular_statistic.dart';
 
+export 'package:fit_app/widgets/device_card.dart';
+export 'package:fit_app/widgets/last_activity_card.dart';
 export 'package:fit_app/widgets/custom_card.dart';
 export 'package:fit_app/widgets/basic_statistics.dart';
 export 'package:fit_app/widgets/botton_nav_bar.dart';
