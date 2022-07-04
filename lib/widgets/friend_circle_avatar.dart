@@ -24,7 +24,10 @@ class FriendCircleAvatar extends StatelessWidget {
         ),
         Text(
           username,
-          style: AppTheme.h4b,
+          style: TextStyle(
+              fontSize: AppTheme.h4b.fontSize,
+              color: Colors.black,
+              fontWeight: FontWeight.w300),
         )
       ],
     );

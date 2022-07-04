@@ -1,3 +1,4 @@
+import 'package:fit_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CardSlider extends StatelessWidget {
@@ -25,7 +26,10 @@ class CardSlider extends StatelessWidget {
           padding: paddingLabels ?? const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Text(title), action ?? const SizedBox()]),
+              children: [
+                Text(title, style: AppTheme.h4b),
+                action ?? const SizedBox()
+              ]),
         ),
         Expanded(
           child: Padding(
